@@ -1,0 +1,22 @@
+pluginManagement {
+    repositories {
+        google()                // kho của Google (chứa AGP, Firebase…)
+        mavenCentral()          // thay thế cho jcenter
+        gradlePluginPortal()    // chứa các plugin Gradle khác
+    }
+}
+
+dependencyResolutionManagement {
+    // Bắt buộc dùng repo khai báo ở đây, không cho phép khai báo riêng trong build.gradle
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.name = "CafeManagerProKotlin"
+
+// Thêm module app chính
+include(":app")
+include(":payments-mock-ktor")

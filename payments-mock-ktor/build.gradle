@@ -1,0 +1,27 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm'
+    id 'org.jetbrains.kotlin.plugin.serialization'
+    id 'application'
+}
+
+def ktor_version = '2.3.7'
+
+dependencies {
+    implementation "io.ktor:ktor-server-core-jvm:${ktor_version}"
+    implementation "io.ktor:ktor-server-netty-jvm:${ktor_version}"
+    implementation "io.ktor:ktor-server-content-negotiation-jvm:${ktor_version}"
+    implementation "io.ktor:ktor-serialization-kotlinx-json-jvm:${ktor_version}"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3"
+    implementation "ch.qos.logback:logback-classic:1.4.14"
+
+    testImplementation "io.ktor:ktor-server-tests-jvm:${ktor_version}"
+    testImplementation "org.jetbrains.kotlin:kotlin-test-junit:1.9.22"
+}
+
+application {
+    mainClass = 'com.example.payments.ApplicationKt'
+}
+
+kotlin {
+    jvmToolchain(17)
+}

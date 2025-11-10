@@ -1,0 +1,26 @@
+package com.pro.shopfee.utils
+
+/**
+ * API Keys Configuration
+ * 
+ * IMPORTANT: Copy this file to ApiKeys.kt and fill in your actual API keys.
+ * DO NOT commit ApiKeys.kt to version control!
+ * 
+ * To use:
+ * 1. Copy this file: cp ApiKeys.kt.example ApiKeys.kt
+ * 2. Replace all placeholder values with your actual API keys
+ * 3. Update Constant.kt to use values from ApiKeys.kt
+ */
+object ApiKeys {
+    // Google Maps API Key
+    const val GOOGLE_MAPS_API_KEY = "YOUR_GOOGLE_MAPS_API_KEY"
+    
+    // VNPay Configuration
+    const val VNPAY_TMN_CODE = "YOUR_VNPAY_TMN_CODE"
+    const val VNPAY_HASH_SECRET = "YOUR_VNPAY_HASH_SECRET"
+    
+    // Blockchain Configuration
+    const val BLOCKCHAIN_RPC_BASE_URL = "https://eth-sepolia.g.alchemy.com/v2/YOUR_ALCHEMY_API_KEY/"
+    const val BLOCKCHAIN_RECEIVER_ADDRESS = "YOUR_BLOCKCHAIN_RECEIVER_ADDRESS"
+}
+
